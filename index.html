@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>color changer</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <style>
+
+        body{
+            background-color: rgb(202, 229, 253);
+            font-family: 'Source Sans Pro', sans-serif;
+            text-align: center;
+            
+           
+        }
+        .btn{
+            display: inline-block;
+            height: 30px;
+            width: 30px;
+            border-radius: 50%;
+            border: 2px solid black;
+            cursor: pointer;
+
+        }
+
+        .box{
+            
+            background-color: burlywood;
+            height: 150px;
+            width: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 15px;
+            box-shadow: 3px 3px 3px black;
+            
+        }
+
+        .box p{
+            font-size: 30px;
+        }
+        .box i{
+            font-size: 30px;
+            margin-left: 6px;
+           
+            
+        }
+        .container{
+            display: flex;
+            justify-content: center;
+            
+        }
+        .text{
+            padding: 40px 0px 20px 0px;
+        }
+        .span{
+            margin-top: 26px;
+        }
+        #color1{
+            background-color:#ff8000;
+        }
+        #color2{
+            background-color:#80ff00 ;
+        }
+        #color3{
+             background-color:#00ffbf ;
+        }
+        #color4{
+            background-color: #00ffbf;
+        }
+        #color5{
+             background-color: #8000ff;
+        }
+        #color6{
+            background-color: #ff0080;
+        }
+        #color7{
+             background-color: #0000ff;
+        }
+        #color8{
+             background-color: #ffff66;
+        }
+        #color9{
+             background-color: #808080;
+        }
+        #color10{
+            background-color: #ff9933;
+        }
+
+        @media screen and (max-width:500px) {
+           
+            .span{
+                width: 200px;
+                margin-left: 30vw;
+            }
+        }
+
+        @media screen and (max-width:425px) {
+           
+            .span{
+                width: 200px;
+                margin-left: 27vw;
+            }
+
+            .box{
+                margin: 0px 32px ;
+            }
+        }
+
+        @media screen and (max-width:400px) {
+           
+            .span{
+                width: 200px;
+                margin-left: 22vw;
+            }
+
+            .box{
+                margin: 0px 32px ;
+            }
+        }
+
+        @media screen and (max-width:320px) {
+           
+            .span{
+                width: 200px;
+                margin-left: 22vw;
+            }
+
+            .box{
+                margin: 0px 32px ;
+            }
+
+            .box i{
+                position: relative;
+                top: 20px;
+                right: 66px;
+            }
+        }
+
+
+
+
+    </style>
+
+</head>
+<body>
+    <h1 class="text">Color Changer</h1>
+
+    <div class="container">
+
+        <div class="box text" id="boxid">
+           <p> Change My Color </p> 
+           <i class="bi bi-emoji-smile-fill" id="emo"></i>
+            
+        </div>
+        
+    </div>
+
+    <div class="span">
+
+    <span class="btn" id="color1" onclick="change('#ff8000')"></span>
+    <span class="btn" id="color2" onclick="change('#80ff00')"></span>
+    <span class="btn" id="color3" onclick="change('#00ffbf')"></span>
+    <span class="btn" id="color4" onclick="change('#00bfff')"></span>
+    <span class="btn" id="color5" onclick="change('#8000ff')"></span>
+    <span class="btn" id="color6" onclick="change('#ff0080')"></span>
+    <span class="btn" id="color7" onclick="change('#0000ff')"></span>
+    <span class="btn" id="color8" onclick="change('#ffff66')"></span>
+    <span class="btn" id="color9" onclick="change('#808080')"></span>
+    <span class="btn" id="color10" onclick="change('#ff9933')"></span>
+</div>
+
+
+
+<script>
+    function change(color){
+
+        let x = document.getElementById("boxid");
+
+        x.style.backgroundColor = color;
+
+
+        let emoj = document.getElementById("emo");
+
+        if(color == "#ff8000"){
+                emoj.style.color = "white";
+
+        }else if (color == "#80ff00"){
+           emoj.style.color = "blue";
+        }
+         else if (color == "#80ff00"){
+           emoj.style.color = "brown";
+        }
+         else if (color == "#00ffbf"){
+           emoj.style.color = "black";
+
+        }
+         else if (color == "#8000ff"){
+           emoj.style.color = "white";
+        }
+         else if (color == "#00bfff"){
+           emoj.style.color = "yellow";
+        }
+         else if (color == "#ff0080"){
+           emoj.style.color = "orange";
+        }
+         else if (color == "#0000ff"){
+           emoj.style.color = "white";
+        }
+         else if (color == "#ff9933"){
+           emoj.style.color = "yellow";
+        } 
+        else{
+            emoj.style.color = "black";
+        }
+
+    }
+</script>
+</body>
+</html>
